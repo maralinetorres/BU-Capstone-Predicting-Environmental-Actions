@@ -26,10 +26,10 @@ Header | Description
 `tic` | Ticker of company
 `cusip` | Code that identifies a North American financial security for the purposes of facilitating clearing and settlement of trades
 `conm` | Full name of company
-`act` | ??????????
-`ni` | ??????????
-`sale	` | ??????
-`cik` | ????
+`act` | Total assets
+`ni` | Net income/loss
+`sale	` | Total sales
+`cik` | SEC identifying number
 
 
 Yahoo
