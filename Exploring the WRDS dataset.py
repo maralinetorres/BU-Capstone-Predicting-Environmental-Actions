@@ -38,6 +38,7 @@ stocks[(stocks['at'].isna()) | (stocks['ni'].isna()) | (stocks['sale'].isna())]
 bkr = stocks.loc[stocks['tic'] == 'BKR', ['at','ni','sale','fyear']] #Yes, we have data for 2017 to 2020, maybe we can impute with average
 bkr['fyear'] = pd.to_datetime(bkr.fyear, format='%Y')
 
+
 #Verify how the variables behave to decide how to impute
 plt.figure(figsize=(3,3))
 sns.pairplot(bkr)
@@ -55,9 +56,9 @@ axs[2].set_title('Sales')
 plt.show()
 
 bkr_impute = bkr.copy()
-bkr_impute['at'].fillna(bkr_impute['at'].mean(), inplace=True)
-bkr_impute['ni'].fillna(bkr_impute['ni'].mean(), inplace=True)
-bkr_impute['sale'].fillna(bkr_impute['sale'].mean(), inplace=True)
+bkr_impute['at'].fillna(bkr_impute['at'].min(), inplace=True)
+bkr_impute['ni'].fillna(bkr_impute['ni'].min(), inplace=True)
+bkr_impute['sale'].fillna(bkr_impute['sale'].min(), inplace=True)
 
 fig, axs = plt.subplots(1,3, figsize=(25,5))
 fig.tight_layout(pad=10)
@@ -70,6 +71,12 @@ sns.barplot(bkr_impute['fyear'].dt.year, bkr_impute.sale, ax=axs[2], color='r')
 axs[2].set_title('Sales')
 plt.show()
 
+##Decide to fill with minimum
+stocks['at'].fillna(stocks['at'].min(), inplace=True)
+stocks['ni'].fillna(stocks['ni'].min(), inplace=True)
+stocks['sale'].fillna(stocks['sale'].min(), inplace=True)
+
+stocks.isna().sum() #no more nulls
 
 #Count for each company how many year data we have
 company_byyear = stocks.groupby(by='fyear')['tic'].count()
@@ -103,3 +110,57 @@ cmap = sns.diverging_palette(230, 20, as_cmap=True)
 sns.heatmap(corr, mask=mask, cmap=cmap, vmax=.3, center=0,
             square=True, linewidths=.5, cbar_kws={"shrink": .5}).set(title='Correlation Matrix')
 plt.show()
+
+#Calculate $change in variables and FInancial ratios
+
+########### GROWTH RATES ###########
+## Sales and Assets should be positive
+# Net income --> be careful interpretating net income because of positive and negative signs
+
+company = list(stocks['conm'].unique())
+
+def calculate_growth_ratios(company):
+    for com in company:
+        a =  stocks.loc[stocks.conm == com, ['fyear','at','ni','sale']]
+        l = len(a)
+        count = 0
+        at2 = []
+        ni = []
+        sale = []
+        while count < l:
+            index = count - 1
+            if(count != 0):
+                #assets ratio
+                current_a = a.iloc[count,1]
+                last_a = a.iloc[index,1]
+                at = ((current_a)/(last_a)-1)*100
+                at2.append(at)
+                ##net income ratio
+                current_ni = a.iloc[count,2]
+                last_ni = a.iloc[index,2]
+                ni_1 = ((current_ni)/(last_ni)-1)*100
+                ni.append(ni_1)
+                #Sales ratio
+                current_s = a.iloc[count,3]
+                last_s = a.iloc[index,3]
+                sales = ((current_s)/(last_s)-1)*100
+                sale.append(sales)
+            else:
+                at2.append(0)
+                ni.append(0)
+                sale.append(0)
+            count += 1
+
+        stocks.loc[stocks.conm == com, 'Change_in_Sales'] = sale
+        stocks.loc[stocks.conm == com,'Change_in_Assets'] = at2
+        stocks.loc[stocks.conm == com, 'Change_in_NI'] = ni
+
+calculate_growth_ratios(company)
+
+######### FINANCIAL RATIOS ################
+#ROA --> Return on assets
+#Profit Margin
+stocks['ROA'] = (stocks.ni/stocks['at']) * 100
+stocks['Profit_Margin'] = (stocks.ni/stocks.sale) * 100
+
+stocks.to_csv('stocks_52.csv')
