@@ -20,6 +20,8 @@ stocks.isna().sum() # coluns at, ni and sales have 3 rows with null
 #Drop duplicates if any
 stocks.drop_duplicates(inplace=True) # We dont have duplicates
 
+len(stocks.tic.unique()) # number of unique companies 
+
 #Remove 2020 data
 stocks = stocks.loc[stocks.fyear != 2020, ]
 stocks.shape #757 rows and 10 columns
