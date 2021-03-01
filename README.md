@@ -12,6 +12,7 @@ Header | Description
 ---|---------
 `Year` | The year of the data point
 `12 Months Ending` | The last date of the year that the data was collected
+`GHG Scope 1` | Direct emissions from sources that are owned or controlled by the Agency
 `Environmental Disclosure Score` | Corporate environmental and social performance
 `Total Energy Consumption` | Energy used by company during the year
 `Ticker` | Ticker of company
