@@ -79,3 +79,32 @@ final.to_csv('esg_52companies.csv')
 final.loc[final.Ticker == 'XOM', ['GHG Scope 1']]
 stock
 #Ratio of GHG Emissions to Total Assets
+
+bloomberg = pd.read_csv("/Users/maralinetorres/Documents/GitHub/Predicting-Environmental-and-Social-Actions/Datasets/esg_52companies.csv")
+bloomberg.shape
+wrds = pd.read_csv("/Users/maralinetorres/Documents/GitHub/Predicting-Environmental-and-Social-Actions/Datasets/stocks_52.csv")
+wrds.shape
+yahoo = pd.read_csv("/Users/maralinetorres/Documents/GitHub/Predicting-Environmental-and-Social-Actions/Yahoo Returns.csv")
+yahoo.shape
+
+merge = pd.merge(bloomberg, wrds, how="left", left_on = ['Ticker','Year'], right_on = ['tic','fyear'])
+merge.shape
+
+merge = pd.merge(merge, yahoo, how="left", left_on = ['Ticker','Year'], right_on = ['Ticker','Year'])
+merge.shape
+
+
+cols = ["gvkey","datadate","fyear","tic","Unnamed: 0_y","Date","Unnamed: 0_x"]
+
+merge.drop(columns = cols, inplace=True)
+
+merge['Logarithm_Total_Assets'] = np.log(merge['at'])
+merge['Logarithm_Total_Sales'] = np.log(merge['sale'])
+
+rename = {'at': "Total_Assets", 'ni': "Net_Income", 'sale': "Total_Sales","conm": "Company"}
+merge.rename(columns=rename, inplace=True)
+merge['Profitable'] = np.where(merge.Net_Income > 0, True, False)
+
+merge.info()
+merge.to_csv('company_data.csv', index=False)
+#Merge the three tables
