@@ -105,3 +105,9 @@ profitable = df[df.Profitable == True].groupby('Year')[['Ticker']].count().reset
 sns.barplot(x='Year', y='Ticker', data=profitable, palette='mako')
 plt.title('Number of profitable companies by year')
 plt.show()
+
+df.loc[(df.Company.isna()), ['Company','Ticker','cik','cusip']]
+df.loc[(df.Ticker == 'PSX') & (df.Company.isna()), ['Company','cik','cusip']] = ['PHILLIPS 66','1534701.0','718546104']
+df.loc[df.Ticker == 'PSX',['Company','cik','cusip']]
+
+df.to_csv('Datasets/company_data.csv', index=False)
