@@ -8,14 +8,16 @@ from datetime import datetime, date
 df = pd.read_csv("/Users/maralinetorres/Documents/GitHub/Predicting-Environmental-and-Social-Actions/Datasets/company_data.csv")
 df.isna().sum() # coluns at, ni and sales have 3 rows with null 
 
-df[(df.Ticker == 'BKR') & (df['Total_Assets'].isna()) & (df['Total_Sales'].isna()) & (df['Total_Assets'].isna())]
-df.loc[(df.Ticker == 'BKR') & (df.Year <= 2016) &(df.Year >= 2014),  ['Total_Assets','Total_Sales','Net_Income','Company','Profitable','Change_in_Assets']]
-df.loc[(df.Ticker == 'BKR') & (df.Year <= 2016) &(df.Year >= 2014),  ['Total_Assets','Total_Sales','Net_Income','Profit_Margin','Logarithm_Total_Assets','Logarithm_Total_Sales','ROA']] = np.nan
-df.loc[(df.Ticker == 'BKR') & (df.Year <= 2016) &(df.Year >= 2014),['Change_in_Assets','Change_in_Sales','Change_in_NI']] = np.nan
-df.loc[df.Ticker == 'BKR',:]
-df.to_csv('company_data.csv', index=False)
+#Code used to undo the data cleaning for WDS
+#df[(df.Ticker == 'BKR') & (df['Total_Assets'].isna()) & (df['Total_Sales'].isna()) & (df['Total_Assets'].isna())]
+#df.loc[(df.Ticker == 'BKR') & (df.Year <= 2016) &(df.Year >= 2014),  ['Total_Assets','Total_Sales','Net_Income','Company','Profitable','Change_in_Assets']]
+#df.loc[(df.Ticker == 'BKR') & (df.Year <= 2016) &(df.Year >= 2014),  ['Total_Assets','Total_Sales','Net_Income','Profit_Margin','Logarithm_Total_Assets','Logarithm_Total_Sales','ROA']] = np.nan
+#df.loc[(df.Ticker == 'BKR') & (df.Year <= 2016) &(df.Year >= 2014),['Change_in_Assets','Change_in_Sales','Change_in_NI']] = np.nan
+#df.loc[df.Ticker == 'BKR',:]
+#df.to_csv('company_data.csv', index=False)
 
 df.info()
+df.isna().sum()
 
 df.loc[(df.Ticker == 'BKR'), ['Year','Total_Assets','Total_Assets','Net_Income','Change_in_Sales','Change_in_Assets','Change_in_NI']]
 
@@ -111,3 +113,17 @@ df.loc[(df.Ticker == 'PSX') & (df.Company.isna()), ['Company','cik','cusip']] = 
 df.loc[df.Ticker == 'PSX',['Company','cik','cusip']]
 
 df.to_csv('Datasets/company_data.csv', index=False)
+
+df.head()
+
+#Get companies that don't have GHG Scope
+stock_missing_ghg = df.loc[df['GHG Scope 1'].isna(), ['Ticker','Year']].groupby('Ticker').count().reset_index()
+sns.barplot(x='Ticker', y='Year', data=stock_missing_ghg, palette='mako')
+plt.xticks(rotation = 30)
+plt.title('Number of years missing GHG Scope data by company')
+plt.show() #49 comapnies missing GHG Data
+
+df.Year.describe().T #Data from 2005 to 2019
+
+df.info()
+df.shape #780 rows
