@@ -14,7 +14,7 @@ After the pilot, we added more data to this project. This new datasource was col
 ## Individual datasets 
 
 WRDS
-Header | Description
+Feature | Description
 ---|---------
 `gvkey` | Number key assigned to each company (issue, currency, index) in the Capital IQ Compustat database
 `datadate` | Date of observation
@@ -28,7 +28,7 @@ Header | Description
 `cik` | SEC identifying number
 
 Yahoo
-Header | Description
+Feature | Description
 ---|---------
 `Adj Close` | Closing price to reflect that stock's value after accounting for any corporate actions
 `Close` | Close price - is the raw price, which is just the cash value of the last transacted price before the market closes.
@@ -38,7 +38,7 @@ Header | Description
 `Volume` | The amount of an asset or security that changed hands during day
 
 Bloomberg
-Header | Description
+Feature | Description
 ---|---------
 `Year` | The year of the data point
 `12 Months Ending` | The last date of the year that the data was collected
@@ -52,7 +52,7 @@ Header | Description
 
 
 Pilot Stock 
-Header | Description
+Feature | Description
 ---|---------
 `Year` | The year of the data point
 `Ticker` | Ticker of company
@@ -84,7 +84,7 @@ Header | Description
 
 
 Environmental Impact
-Header | Description
+Feature | Description
 ---|---------
 `ISIN` | An International Securities Identification Number (ISIN) is a code that uniquely identifies a specific securities issue
 `Year` | The year in which the environmental impact was incurred by the firm's operations.
@@ -127,7 +127,7 @@ Source: “Freiberg, David and Park, DG and Serafeim, George and Zochowski, Rob.
 ## Financial Information dataset
 
 Financial Information
-Header | Description
+Feature | Description
 ---|---------
 `gvkey` | The Global Company Key is a unique six-digit number key assigned to each company
 `fyear` | Fiscal year
