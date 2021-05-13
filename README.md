@@ -1,22 +1,17 @@
 # Predicting Environmental and Social Actions
 
-This project focuses on predicting environmental and social actions based on historical data of ESG score, GHG scope, and total energy consumption. The objective is to give our client investment advice based on a company's environmental factors.
+This project focuses on predicting environmental and social actions based on historical data of ESG score, GHG scope, and total energy consumption. The objective is to give our client investment advice based on a company's environmental factors. To do so, we plan to develop an accurate, unbiased and robust model to determine the future environmental and social accountability of a company.
+
+
 # Data collection methodology
 
-We have used Yahoo finance API, WHARTON Research Data Services, and Bloomberg terminal data. 
+For our initial pilot model, we collected data from Wharton Research Data Services (WRDS), Yahoo finance API and Bloomberg terminal data. 
 
-## Description of the data
+After the pilot, we added more data to this project. This new datasource was collected from : Freiberg, David and Park, DG and Serafeim, George and Zochowski, Rob. 2020. Corporate Environmental Impact: Measurement, Data and Information. Harvard Business School, Impact-Weighted Accounts Project report.
 
-Bloomberg
-Header | Description
----|---------
-`Year` | The year of the data point
-`12 Months Ending` | The last date of the year that the data was collected
-`GHG Scope 1` | Direct emissions from sources that are owned or controlled by the Agency
-`Environmental Disclosure Score` | Corporate environmental and social performance
-`Total Energy Consumption` | Energy used by company during the year
-`Ticker` | Ticker of company
+# Description of the data
 
+## Individual datasets 
 
 WRDS
 Feature | Description
@@ -27,23 +22,21 @@ Feature | Description
 `tic` | Ticker of company
 `cusip` | Code that identifies a North American financial security for the purposes of facilitating clearing and settlement of trades
 `conm` | Full name of company
-`act` | Total assets
-`ni` | Net income/loss
-`sale	` | Total sales
+`act` | Total assets -  it is all the assets, or items of value, a small business owns. Included in total assets is cash, accounts receivable, inventory, equipment, etc.
+`ni` | Net income/loss - is an entity's income minus cost of goods sold, expenses, depreciation and amortization, interest, and taxes for an accounting period.
+`sale	` | Total sales - the total amount of all cash, credit, installment, and conditional sales made during the period covered by the return.
 `cik` | SEC identifying number
-
 
 Yahoo
 Feature | Description
 ---|---------
 `Adj Close` | Closing price to reflect that stock's value after accounting for any corporate actions
-`Close` | Close price
-`High` | Highest price of the day
-`Low` | Lowest price of the day
+`Close` | Close price - is the raw price, which is just the cash value of the last transacted price before the market closes.
+`High` | Highest stock price of the day
+`Low` | Lowest stock price of the day
 `Ticker` | Ticker of company
 `Volume` | The amount of an asset or security that changed hands during day
 
-<<<<<<< HEAD
 Bloomberg
 Feature | Description
 ---|---------
@@ -55,7 +48,7 @@ Feature | Description
 `Ticker` | Ticker of company
 
 
-### Pilot dataset
+## Pilot dataset
 
 
 Pilot Stock 
@@ -87,7 +80,7 @@ Feature | Description
 `Logarithm_Total_Assets` | Natural logarithm for total assets
 `Logarithm_Total_Sales` | Natural logarithm for total sales
 
-### Environmental Impact dataset
+## Environmental Impact dataset
 
 
 Environmental Impact
@@ -155,6 +148,4 @@ We work with the following notebooks (and in this order):
 4. Fixed_Effects_Regressions
 5. EDA_for_ISIN_&_WRDS
 
-=======
->>>>>>> parent of 9396477 (Check in multiple changes to the github)
 
