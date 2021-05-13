@@ -110,7 +110,7 @@ Header | Description
 `SDG 3.3` | By 2030, end the epidemics of AIDS, tuberculosis, malaria and neglected tropical diseases and combat hepatitis, water-borne diseases and other communicable diseases.
 `SDG 3.4` | By 2030, reduce by one third premature mortality from non-communicable diseases through prevention and treatment and promote mental health and well-being.
 `SDG 3.9` | By 2030, substantially reduce the number of deaths and illnesses from hazardous chemicals and air, water and soil pollution and contamination.
-`SDG 6: `Ensure availability and sustainable management of water and sanitation for all.
+`SDG 6` | Ensure availability and sustainable management of water and sanitation for all.
 `SDG 12.2` | By 2030, achieve the sustainable management and efficient use of natural resources.
 `SDG 14.1` | By 2025, prevent and significantly reduce marine pollution of all kinds, in particular from land-based activities, including marine debris and nutrient pollution.
 `SDG 14.2` |By 2020, sustainably manage and protect marine and coastal ecosystems to avoid significant adverse impacts, including by strengthening their resilience, and take action for their restoration in order to achieve healthy and productive oceans.
@@ -121,7 +121,7 @@ Header | Description
 `SDG 15.5` | Take urgent and significant action to reduce the degradation of natural habitats, halt the loss of biodiversity and, by 2020, protect and prevent the extinction of threatened species.
 `% Imputed` | Refers to the percentage of a firm-year's total environmental impact that is derived from our imputation methodology using the Exiobase's industry-level data.
 
-“Freiberg, David and Park, DG and Serafeim, George and Zochowski, Rob. 2020. Corporate Environmental Impact: Measurement, Data and Information. Harvard Business School, Impact-Weighted Accounts Project report.”
+Source: “Freiberg, David and Park, DG and Serafeim, George and Zochowski, Rob. 2020. Corporate Environmental Impact: Measurement, Data and Information. Harvard Business School, Impact-Weighted Accounts Project report.”
 
 
 ## Financial Information dataset
