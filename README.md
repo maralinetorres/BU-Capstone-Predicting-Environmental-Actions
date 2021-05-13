@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Predicting Environmental and Social Actions
 
 This project focuses on predicting environmental and social actions based on historical data of ESG score, GHG scope, and total energy consumption. The objective is to give our client investment advice based on a company's environmental factors. To do so, we plan to develop an accurate, unbiased and robust model to determine the future environmental and social accountability of a company.
@@ -9,9 +14,9 @@ For our initial pilot model, we collected data from Wharton Research Data Servic
 
 After the pilot, we added more data to this project. This new datasource was collected from : Freiberg, David and Park, DG and Serafeim, George and Zochowski, Rob. 2020. Corporate Environmental Impact: Measurement, Data and Information. Harvard Business School, Impact-Weighted Accounts Project report.
 
-# Description of the data
+## Description of the data
 
-## Individual datasets 
+### Individual datasets 
 
 WRDS
 Feature | Description
@@ -48,7 +53,7 @@ Feature | Description
 `Ticker` | Ticker of company
 
 
-## Pilot dataset
+### Pilot dataset
 
 
 Pilot Stock 
@@ -80,7 +85,7 @@ Feature | Description
 `Logarithm_Total_Assets` | Natural logarithm for total assets
 `Logarithm_Total_Sales` | Natural logarithm for total sales
 
-## Environmental Impact dataset
+### Environmental Impact dataset
 
 
 Environmental Impact
