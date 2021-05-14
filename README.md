@@ -9,6 +9,17 @@ For our initial pilot model, we collected data from Wharton Research Data Servic
 
 After the pilot, we added more data to this project. This new datasource was collected from : Freiberg, David and Park, DG and Serafeim, George and Zochowski, Rob. 2020. Corporate Environmental Impact: Measurement, Data and Information. Harvard Business School, Impact-Weighted Accounts Project report.
 
+# Navigate our analysis
+
+We work with the following notebooks (and in this order):
+
+1. Data Collection, Cleaning and Exploratory Data Analysis
+2. Exploratory Data Analysis-PilotStocks
+3. GHG Scope 1 Predictive Model Evaluation
+4. Fixed_Effects_Regressions
+5. EDA_for_ISIN_&_WRDS
+
+
 # Description of the data
 
 ## Individual datasets 
@@ -138,14 +149,4 @@ Feature | Description
 `sic` | Standard industry classification code 
  
  
-# Navigate our analysis
-
-We work with the following notebooks (and in this order):
-
-1. Data Collection, Cleaning and Exploratory Data Analysis
-2. Exploratory Data Analysis-PilotStocks
-3. GHG Scope 1 Predictive Model Evaluation
-4. Fixed_Effects_Regressions
-5. EDA_for_ISIN_&_WRDS
-
 
