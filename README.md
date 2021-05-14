@@ -25,6 +25,10 @@ We work with the following notebooks (and in this order):
 ## Individual datasets 
 
 WRDS
+
+Preview
+![Image of WRDS](https://github.com/maralinetorres/Predicting-Environmental-and-Social-Actions/blob/main/Datasets/Previews/WRDS.png?raw=true)
+
 Feature | Description
 ---|---------
 `gvkey` | Number key assigned to each company (issue, currency, index) in the Capital IQ Compustat database
@@ -39,6 +43,10 @@ Feature | Description
 `cik` | SEC identifying number
 
 Yahoo
+
+Preview
+![Image of Yahoo](https://github.com/maralinetorres/Predicting-Environmental-and-Social-Actions/blob/main/Datasets/Previews/Yahoo.png?raw=true)
+
 Feature | Description
 ---|---------
 `Adj Close` | Closing price to reflect that stock's value after accounting for any corporate actions
@@ -49,6 +57,9 @@ Feature | Description
 `Volume` | The amount of an asset or security that changed hands during day
 
 Bloomberg
+
+Preview
+![Image of Bloomberg](https://github.com/maralinetorres/Predicting-Environmental-and-Social-Actions/blob/main/Datasets/Previews/Bloomberg.png?raw=true)
 Feature | Description
 ---|---------
 `Year` | The year of the data point
@@ -136,6 +147,10 @@ Source: “Freiberg, David and Park, DG and Serafeim, George and Zochowski, Rob.
 
 
 ## Financial Information dataset
+
+
+Preview
+![Image of Financial](https://github.com/maralinetorres/Predicting-Environmental-and-Social-Actions/blob/main/Datasets/Previews/Financial_Dataset.png?raw=true)
 
 Financial Information
 Feature | Description
