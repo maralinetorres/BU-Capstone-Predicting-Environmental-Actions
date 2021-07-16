@@ -22,7 +22,7 @@ We work with the following notebooks (and in this order):
 7. PredictingTimeSeries - GHG Scope
 8. DistilBERT_and_level_regressions
 9. DistilBERT_Companiesdescription
-
+10. Building_Classification_Model
 Appendix Notebook: Environmental-Impact-Data Cleaning
 
 # Description of the data
