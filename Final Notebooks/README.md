@@ -5,7 +5,7 @@ output:
 ---
 # Predicting Environmental and Social Actions
 
-This project focuses on predicting environmental and social actions based on historical data of ESG score, GHG scope, and total energy consumption. The objective is to give our client investment advice based on a company's environmental factors. To do so, we plan to develop an accurate, unbiased and robust model to determine the future environmental and social accountability of a company.
+This project focuses on predicting environmental and social actions based on historical data of ESG score, GHG scope, total energy consumption and environmental intensity. The objective is to give our client investment advice based on a company's environmental factors. To do so, we plan to develop an accurate, unbiased and robust model to determine the future environmental and social accountability of a company.
 
 
 # Data collection methodology
@@ -27,9 +27,10 @@ We work with the following notebooks (and in this order):
 7. PredictingTimeSeries - GHG Scope
 8. Environmental Intensity Time Series - Level Regression
 9. DistilBERT_CompaniesDescription
-10.Building_Classification_Model.ipynb
+10. Building_Classification_Model.ipynb
 
-Appendix Notebook: Environmental-Impact-Data Cleaning and the classification_app.py
+Appendix Notebook: Environmental-Impact-Data Cleaning 
+Streamlit Web app: classification_app.py
 
 # Description of the data
 
@@ -38,7 +39,7 @@ Appendix Notebook: Environmental-Impact-Data Cleaning and the classification_app
 WRDS
 
 Preview
-![Image of WRDS](https://github.com/maralinetorres/Predicting-Environmental-and-Social-Actions/blob/main/Datasets/Previews/WRDS.png?raw=true)
+
 
 Feature | Description
 ---|---------
@@ -56,7 +57,7 @@ Feature | Description
 Yahoo
 
 Preview
-![Image of Yahoo](https://github.com/maralinetorres/Predicting-Environmental-and-Social-Actions/blob/main/Datasets/Previews/Yahoo.png?raw=true)
+
 
 Feature | Description
 ---|---------
@@ -70,7 +71,8 @@ Feature | Description
 Bloomberg
 
 Preview
-![Image of Bloomberg](https://github.com/maralinetorres/Predicting-Environmental-and-Social-Actions/blob/main/Datasets/Previews/Bloomberg.png?raw=true)
+
+
 Feature | Description
 ---|---------
 `Year` | The year of the data point
@@ -85,6 +87,8 @@ Feature | Description
 
 
 Pilot Stock 
+
+
 Feature | Description
 ---|---------
 `Year` | The year of the data point
@@ -117,6 +121,8 @@ Feature | Description
 
 
 Environmental Impact
+
+
 Feature | Description
 ---|---------
 `ISIN` | An International Securities Identification Number (ISIN) is a code that uniquely identifies a specific securities issue
@@ -160,10 +166,9 @@ Source: “Freiberg, David and Park, DG and Serafeim, George and Zochowski, Rob.
 ## Financial Information dataset
 
 
-Preview
-![Image of Financial](https://github.com/maralinetorres/Predicting-Environmental-and-Social-Actions/blob/main/Datasets/Previews/Financial_Dataset.png?raw=true)
-
 Financial Information
+
+
 Feature | Description
 ---|---------
 `gvkey` | The Global Company Key is a unique six-digit number key assigned to each company
