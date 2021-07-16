@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Predicting Environmental and Social Actions
 
 This project focuses on predicting environmental and social actions based on historical data of ESG score, GHG scope, and total energy consumption. The objective is to give our client investment advice based on a company's environmental factors. To do so, we plan to develop an accurate, unbiased and robust model to determine the future environmental and social accountability of a company.
@@ -20,10 +25,10 @@ We work with the following notebooks (and in this order):
 5. PredictingTimeSeries_&_PilotStock_CompDescription
 6. IndustriesPredictingTimeSeries
 7. PredictingTimeSeries - GHG Scope
-8. DistilBERT_and_level_regressions
-9. DistilBERT_Companiesdescription
+8. Environmental Intensity Time Series - Level Regression
+9. DistilBERT_CompaniesDescription
 
-Appendix Notebook: Environmental-Impact-Data Cleaning
+Appendix Notebook: Environmental-Impact-Data Cleaning and the classification_app.py
 
 # Description of the data
 
