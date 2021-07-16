@@ -27,6 +27,7 @@ We work with the following notebooks (and in this order):
 7. PredictingTimeSeries - GHG Scope
 8. Environmental Intensity Time Series - Level Regression
 9. DistilBERT_CompaniesDescription
+10.Building_Classification_Model.ipynb
 
 Appendix Notebook: Environmental-Impact-Data Cleaning and the classification_app.py
 
