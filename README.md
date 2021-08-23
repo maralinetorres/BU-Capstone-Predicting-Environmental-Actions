@@ -5,19 +5,26 @@ This project focuses on predicting environmental and social actions based on his
 
 # Data collection methodology
 
-For our initial pilot model, we collected data from Wharton Research Data Services (WRDS), Yahoo finance API and Bloomberg terminal data. 
+For our initial pilot model, we collected data from Wharton Research Data Services (WRDS), Yahoo Finance API and Bloomberg terminal data. 
 
-After the pilot, we added more data to this project. This new datasource was collected from : Freiberg, David and Park, DG and Serafeim, George and Zochowski, Rob. 2020. Corporate Environmental Impact: Measurement, Data and Information. Harvard Business School, Impact-Weighted Accounts Project report.
+After the pilot, we added more data to this project. This new datasource was collected from: Freiberg, David and Park, DG and Serafeim, George and Zochowski, Rob. 2020. Corporate Environmental Impact: Measurement, Data and Information. Harvard Business School, Impact-Weighted Accounts Project report.
 
 # Navigate our analysis
 
-We work with the following notebooks (and in this order):
+We worked with the following notebooks (and in this order):
 
-1. Data Collection, Cleaning and Exploratory Data Analysis
+1. Data collection, cleaning and EDA -Pilot Stocks
 2. Exploratory Data Analysis-PilotStocks
 3. GHG Scope 1 Predictive Model Evaluation
 4. Fixed_Effects_Regressions
-5. EDA_for_ISIN_&_WRDS
+5. PredictingTimeSeries_&_PilotStock_CompDescription
+6. IndustriesPredictingTimeSeries
+7. PredictingTimeSeries - GHG Scope
+8. Environmental_Intensity_Time_Series_Level_Regression
+9. DistilBERT_Companiesdescription
+10. Building_Classification_Model
+
+All of these notebooks can be found in the Notebooks folder. We also including an Appendix notebook that contained more Data Cleaning.
 
 
 # Description of the data
